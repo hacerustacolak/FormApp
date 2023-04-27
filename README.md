@@ -3,8 +3,7 @@ Selamlar,
   FormApplication.Data.Contexts uzantısında bulunan Connection String değeri kendi Sql sisteminize ait bilgiler ile değiştirilerek aktif edilebilir.
   Update-Database komutu ile veri tabanınıza tabloları migration sistemi ile upload edebilirsiniz.
   
-  Kullanıcı adı =admin
-
+  Kullanıcı adı =admin                                                                                                                            
   şifre= 1234
 
 ile kullanabilirsiniz.
