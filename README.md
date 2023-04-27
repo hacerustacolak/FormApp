@@ -16,4 +16,4 @@ Veri tabanı olarak MSSQL kullanılmıştır.
 Saygılarımla,
 
 Hacer USTA ÇOLAK
-Software Developer
+
