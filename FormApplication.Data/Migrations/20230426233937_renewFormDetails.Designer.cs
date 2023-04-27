@@ -4,14 +4,16 @@ using FormApplication.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FormApplication.Data.Migrations
 {
     [DbContext(typeof(FormApplicationContext))]
-    partial class FormApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20230426233937_renewFormDetails")]
+    partial class renewFormDetails
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
