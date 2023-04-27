@@ -12,7 +12,7 @@ namespace FormApplication.Core
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime CreatedAt { get; set; }
-        public int CreatedBy { get; set; }
+        public string CreatedBy { get; set; }
         public List<FormDetails> Fields { get; set; }
     }
 }

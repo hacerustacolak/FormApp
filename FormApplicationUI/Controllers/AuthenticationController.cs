@@ -1,5 +1,7 @@
 ﻿using FormApplication.Core;
 using FormApplication.Service.Abstract;
+using FormApplication.Service.Concrete;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualBasic;
@@ -15,26 +17,33 @@ namespace FormApplicationUI.Controllers
             _userService = userService;
         }
 
-        public IActionResult Login()
+        public ActionResult Login()
         {
-            return View();
+            return View("Login");
         }
 
 
         [HttpPost]
-        public ActionResult Login(UserDto request)
+        public JsonResult Login(UserDto request)
         {
 
             var isUser = _userService.Login(request);
             if (isUser)
             {
-                return RedirectToAction("Index", "Home");
+                // Set a value in the session
+                HttpContext.Session.SetString("SessionVariable", "HacerUstaColak");
+
+
             }
-            else
-            {
-                ViewBag.LoginError = "Böyle bir kullanıcı yoktur.";
-                return View();
-            }
+            return Json(isUser);
+
+        }
+
+        [HttpPost]
+        public JsonResult Logout()
+        {
+            HttpContext.Session.Clear(); 
+            return Json(true);
 
         }
 

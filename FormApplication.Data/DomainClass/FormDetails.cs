@@ -12,10 +12,10 @@ namespace FormApplication.Data.DomainClass
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int FormId { get; set; }
-        public bool Required { get; set; }
         [StringLength(500)]
         public string Name { get; set; }
         [StringLength(50)]
-        public string DataType { get; set; }
+        public string Surname { get; set; }
+        public int Age { get; set; }
     }
 }

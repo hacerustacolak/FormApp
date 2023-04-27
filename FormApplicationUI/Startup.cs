@@ -26,6 +26,13 @@ namespace FormApplicationUI
         {
             services.AddControllersWithViews();
             services.AddDependencyToService();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(30); // Set the session timeout
+                options.Cookie.HttpOnly = true; // Set the HttpOnly flag on the session cookie for security
+            });
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +52,8 @@ namespace FormApplicationUI
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseSession(); // Add the session middleware 
 
             app.UseAuthorization();
 
