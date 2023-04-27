@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Table with JavaScript</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+
+    <div style="margin-left: 90%;margin-bottom: 4%;margin-top: 2%;">
+        <button class="btn btn-danger" id="logout">Logout</button>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-12 col-lg-12">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h2>Formlar</h2>
+                        <div style="margin-left: 90%;margin-bottom: 2%;">
+                            <button class="btn btn-primary" id="add-row">Add Form</button>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <table class="table" id="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Created At</th>
+                                    <th>Created By</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-body">
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Yeni Form Ekle</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+
+
+
+                    <div class="form-group">
+                        <label for="email">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control" id="description" placeholder="Description">
+                    </div>
+
+
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Vazgeç</button>
+                    <button type="button" class="btn btn-primary" id="saveForm">Kaydet</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myAddDataModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Data Girişi</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <input class="form-control" hidden type="text" id="formId">
+
+
+                    <div class="form-group">
+                        <label for="email">Name</label>
+                        <input type="text" class="form-control" id="nameData" placeholder="Enter Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">Surname</label>
+                        <input type="text" class="form-control" id="surnameData" placeholder="Enter Surname">
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">Age</label>
+                        <input type="number" class="form-control" id="ageData" placeholder="Enter Age">
+                    </div>
+
+
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Vazgeç</button>
+                    <button type="button" class="btn btn-primary" id="saveData">Ekle</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myDataModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Data Girişi</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table" id="table-data">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Surname</th>
+                                <th>Age</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body-data">
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/js/Index.js"></script>
+
+</body>
+</html>
