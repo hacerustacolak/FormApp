@@ -4,9 +4,9 @@ Selamlar,
   Update-Database komutu ile veri tabanınıza tabloları migration sistemi ile upload edebilirsiniz.
   
   Kullanıcı adı =admin
-  
+
   şifre= 1234
-  
+
 ile kullanabilirsiniz.
 
 Projenin Amacı, 
